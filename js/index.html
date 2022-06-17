@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <script type="text/javascript" src="https://threejs.org/build/three.js" defer></script>
+    <script type="text/javascript"src="https://threejs.org/examples/js/loaders/GLTFLoader.js" defer></script>
+    <script type="text/javascript" src="./libs/tween.umd.js"></script>
+    <script type="text/javascript" src="./Plansza.js" defer></script>
+    <script type="text/javascript" src="./PodstawaPlansza.js" defer></script>
+    <script type="text/javascript" src="./Stol.js" defer></script>
+    <script type="text/javascript" src="./Net.js" defer></script>
+    <script type="text/javascript" src="./Ui.js"defer></script>
+    <script type="text/javascript" src="./Item.js" defer></script>
+    <script type="text/javascript" src="./Coiny.js" defer></script>
+    <script type="text/javascript" src="./Game.js" defer></script>
+    <script type="text/javascript" src="./Main.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: 0;
+        }
+        body {
+    background-color: darkgray;
+}
+#login {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    height: 45%;
+    width: 50vw;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 2vh;
+    color: white;
+    background-color: grey;
+    font-size: large;
+    /* background opacity: 0; */
+}
+#name {
+    margin: 0.5vh;
+    border: solid 2px white;
+    border-radius:  25px;
+    background-color: rgb(0, 0, 0, 0);
+    width: 20vw;
+    height: 10%;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+}
+#name:checked {
+    border: white 2px solid;
+}
+#loguj,
+#reset {
+    margin: 0.5vh;
+    background-color: white;
+    width: 20vw;
+    height: 20%;
+    border-radius: 25px;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+#loguj:hover {
+    background-color: rgb(68, 57, 57);
+}
+#reset:hover {
+    background-color: rgb(68, 57, 57);
+}
+#status {
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+    border-bottom: 2px solid white;
+    padding: 0.5vh;
+    background: gray;
+    padding-top: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+#wait {
+    position: absolute;
+    left: 45vw;
+    width: 10vw;
+    top: 50vh;
+    border: 2px solid black;
+    padding: 0.5vh;
+    padding-left: 5vw;
+    display: none;
+    background-color: white;
+    color: white;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+#tab {
+    position: absolute;
+    top: 75vh;
+    left: 0px;
+    margin: 10px;
+}
+
+#time {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.481);
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 45vh;
+    display: none;
+}
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="status">STATUS</div>
+        <div id="main">
+            <div id="login">
+                <h2>LOGOWANIE</h2>
+                <br>
+                <input type="text" id="name">
+                <br>
+                <button id="loguj">LOGUJ</button>
+                <br>
+                <button id="reset">RESET</button>
+            </div>
+            <div id="wait">Waiting...</div>
+        </div>
+        <div id="tab"></div>
+        <div id="time"></div>
+    </div>
+    <div id="root">
+
+    </div>
+</body>
+
+</html>
